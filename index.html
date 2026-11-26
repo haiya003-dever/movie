@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieBox</title>
+    <link rel="stylesheet" href="style.css" class="css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Firjar:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="title">
+        <h1>
+          <a href="#"><img src="img/logo.png" /></a>
+        </h1>
+      </div>
+      <div class="wrap">
+        <input
+          type="text"
+          class="form-control"
+          id="searchInput"
+          placeholder="영화제목을 입력하세요"
+          onKeyPress="if(event.keyCode == 13){searchBtn.click()}"
+        />
+
+        <button type="button" class="btn btn-primary" id="searchBtn">
+          검색
+        </button>
+      </div>
+      <div class="frame">
+        <img id="mainPoster" src="" alt="대표 영화 이미지" />
+        <h2 class="movieName"></h2>
+      </div>
+      <div class="menu">
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="movie('now_playing')"
+        >
+          상영영화
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="movie('popular')"
+        >
+          인기영화
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="movie('top_rated')"
+        >
+          추천영화
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="movie('upcoming')"
+        >
+          예정영화
+        </button>
+      </div>
+
+      <div id="movieBoard"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
